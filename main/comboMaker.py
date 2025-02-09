@@ -71,6 +71,13 @@ class Application:
         buttonFrame = tk.Frame(self.master, width=self.master.winfo_width(), height=(self.master.winfo_height() // 3)) # TODO: Make transparent
         buttonFrame.pack(side="bottom")
         
+        #   ↖7   ↑8   9↗
+        #   ←4        6→   Directions will be in an 8 way pattern, named as such 
+        #   ↙1   ↓2   3↘   Arrows will depict these on the User Interface
+
+
+
+
         # TODO: Create list/database of moves and special moves
 
 
@@ -121,6 +128,10 @@ class Application:
         buttonFrame = tk.Frame(self.master, width=self.master.winfo_width(), height=(self.master.winfo_height() // 3)) # TODO: Make transparent
         buttonFrame.pack(side="bottom")
         
+        #   ↖7   ↑8   9↗
+        #   ←4        6→   Directions will be in an 8 way pattern, named as such 
+        #   ↙1   ↓2   3↘   Arrows will depict these on the User Interface
+
         # TODO: Create list/database of moves and special moves
 
 root = tk.Tk()

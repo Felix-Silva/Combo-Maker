@@ -1,0 +1,48 @@
+{
+    "Ryu": {
+        "specials": {
+            "Denjin Charge": {
+                "Base": "22 + P",
+                "OD": "22 + PP"
+            },
+            "Hadoken": {
+                "Light": "236 + LP",
+                "Medium": "236 + MP",
+                "Heavy": "236 + HP",
+                "OD": "236 + PP",
+                "Denjin": "236 + P (Charged)",
+                "Denjin OD": "236 + PP (Charged)"
+            },
+            "Shoryuken": {
+                "Light": "623 + LP",
+                "Medium": "623 + MP",
+                "Heavy": "623 + HP",
+                "OD": "623 + PP"
+            },
+            "Tatsumaki Senpu-kyaku": {
+                "Light": "214 + LK",
+                "Medium": "214 + MK",
+                "Heavy": "214 + HK",
+                "OD": "214 + KK"
+            },
+            "Aerial Tatsumaki Senpu-kyaku": {
+                "Base": "j.214 + K",
+                "OD": "j.214 + KK"
+            },
+            "High Blade Kick": {
+                "Light": "236 + LK",
+                "Medium": "236 + MK",
+                "Heavy": "236 + HK",
+                "OD": "236 + KK"
+            },
+            "Hashogeki": {
+                "Light": "214 + LP",
+                "Medium": "214 + MP",
+                "Heavy": "214 + HP",
+                "OD": "214 + PP",
+                "Denjin": "214 + P (Charged)",
+                "Denjin OD": "214 + PP (Charged)"
+            }
+        }
+    }
+}
