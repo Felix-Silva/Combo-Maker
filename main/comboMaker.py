@@ -9,7 +9,7 @@ class Application:
     def gameSelect(self):
         for child in self.master.winfo_children(): child.destroy() # Wipe elements from screen
 
-        title = tk.Label(self.master, text="Combo Maker", anchor="center", font=("Arial", 42, "bold"))
+        title = tk.Label(self.master, text="Combo Maker", anchor="center", bg="light gray", font=("Arial", 42, "bold"))
         title.pack(padx=20, pady=40)
 
         halfX = self.master.winfo_width() // 2  # Get window width, divide by 2
@@ -29,13 +29,13 @@ class Application:
         backButton = tk.Button(self.master, text="Go Back", width=10, height=3, command=self.gameSelect)
         backButton.place(x=10, y=10)
         
-        title = tk.Label(self.master, text="Street Fighter 6", anchor="center", font=("Arial", 42, "bold"))
-        subTitle = tk.Label(self.master, text="Character Select", anchor="center", font=("Arial", 22, "bold"))
+        title = tk.Label(self.master, text="Street Fighter 6", anchor="center", bg="light gray", font=("Arial", 42, "bold"))
+        subTitle = tk.Label(self.master, text="Character Select", anchor="center", bg="light gray", font=("Arial", 22, "bold"))
 
         title.pack(padx=20, pady=20)
         subTitle.pack(padx=20, pady=10)
         
-        buttonFrame = tk.Frame(self.master)
+        buttonFrame = tk.Frame(self.master, background="")
         buttonFrame.pack(pady=20)
 
         # 25 total characters, listed in order of appearance on roster
@@ -72,13 +72,13 @@ class Application:
         backButton = tk.Button(self.master, text="Go Back", width=10, height=3, command=self.gameSelect)
         backButton.place(x=10, y=10)
 
-        title = tk.Label(self.master, text="Tekken 8", anchor="center", font=("Arial", 42, "bold"))
-        subTitle = tk.Label(self.master, text="Character Select", anchor="center", font=("Arial", 22, "bold"))
+        title = tk.Label(self.master, text="Tekken 8", anchor="center", bg="light gray", font=("Arial", 42, "bold"))
+        subTitle = tk.Label(self.master, text="Character Select", anchor="center", bg="light gray", font=("Arial", 22, "bold"))
 
         title.pack(padx=20, pady=20)
         subTitle.pack(padx=20, pady=10)
 
-        buttonFrame = tk.Frame(self.master)
+        buttonFrame = tk.Frame(self.master, background="")
         buttonFrame.pack(pady=200) # pady might become an issue later
 
         # 36 total characters, listed in order of appearance on roster
@@ -103,10 +103,11 @@ class Application:
     def tekComboScreen(self, name):
         for child in self.master.winfo_children(): child.destroy()
 
-        title = tk.Label(self.master, text=name, anchor="center", font=("Arial", 42, "bold"))
+        title = tk.Label(self.master, text=name, anchor="center", bg="light gray", font=("Arial", 42, "bold"))
         title.pack(padx=20, pady=20)
 
 root = tk.Tk()
 root.title("Combo Maker by Felix Silva")
+root.configure(bg="light gray")
 Application(root)
 root.mainloop()
