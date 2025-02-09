@@ -26,6 +26,7 @@ class Application:
     def sf6CharSel(self):
         for child in self.master.winfo_children(): child.destroy() # Wipe elements from screen
 
+        # "Go Back" button
         backButton = tk.Button(self.master, text="Go Back", width=10, height=3, command=self.gameSelect)
         backButton.place(x=10, y=10)
         
@@ -61,8 +62,16 @@ class Application:
     def sf6ComboScreen(self, name):
         for child in self.master.winfo_children(): child.destroy()
 
-        title = tk.Label(self.master, text=name, anchor="center", font=("Arial", 42, "bold"))
+        backButton = tk.Button(self.master, text="Go Back", width=10, height=3, command=self.sf6CharSel)
+        backButton.place(x=10, y=10)
+
+        title = tk.Label(self.master, text=name, anchor="center", bg="light gray", font=("Arial", 42, "bold"))
         title.pack(padx=20, pady=20)
+
+        buttonFrame = tk.Frame(self.master, width=self.master.winfo_width(), height=(self.master.winfo_height() // 3)) # TODO: Make transparent
+        buttonFrame.pack(side="bottom")
+        
+        # TODO: Create list/database of moves and special moves
 
 
 
@@ -103,11 +112,20 @@ class Application:
     def tekComboScreen(self, name):
         for child in self.master.winfo_children(): child.destroy()
 
+        backButton = tk.Button(self.master, text="Go Back", width=10, height=3, command=self.tekCharSel)
+        backButton.place(x=10, y=10)
+
         title = tk.Label(self.master, text=name, anchor="center", bg="light gray", font=("Arial", 42, "bold"))
         title.pack(padx=20, pady=20)
+
+        buttonFrame = tk.Frame(self.master, width=self.master.winfo_width(), height=(self.master.winfo_height() // 3)) # TODO: Make transparent
+        buttonFrame.pack(side="bottom")
+        
+        # TODO: Create list/database of moves and special moves
 
 root = tk.Tk()
 root.title("Combo Maker by Felix Silva")
 root.configure(bg="light gray")
+root.state('zoomed')
 Application(root)
 root.mainloop()
