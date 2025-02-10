@@ -12,5 +12,5 @@ Support for multiple fighting games
 ### Status
 This project is in its initial stages. More details and features will be added as development progresses.  
 
-![Extremely rough mockup of combo screen UI](https://github.com/Felix-Silva/Combo-Maker/blob/main/UImockup.jpg)
+![Extremely rough mockup of combo screen UI](https://github.com/Felix-Silva/Combo-Maker/blob/assets/UImockup.jpg)
 *Extremely rough* mockup of combo screen UI
