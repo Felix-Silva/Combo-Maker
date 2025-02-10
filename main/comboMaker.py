@@ -1,4 +1,10 @@
 import tkinter as tk
+import json
+import os
+
+os.chdir(r"C:\Users\felix\Combo Maker\main")
+q = open('sf6Moves.json')
+sf6Moves = json.load(q)
 
 class Application:
     def __init__(self, master):
@@ -61,7 +67,7 @@ class Application:
     
     def sf6ComboScreen(self, name):
         for child in self.master.winfo_children(): child.destroy()
-
+        
         backButton = tk.Button(self.master, text="Go Back", width=10, height=3, command=self.sf6CharSel)
         backButton.place(x=10, y=10)
 
@@ -75,10 +81,9 @@ class Application:
         #   ←4        6→   Directions will be in an 8 way pattern, named as such 
         #   ↙1   ↓2   3↘   Arrows will depict these on the User Interface
 
+        print(sf6Moves[name]["specials"]) # Test if reading
 
-
-
-        # TODO: Create list/database of moves and special moves
+        # TODO: Finish .json list of special moves and supers
 
 
 

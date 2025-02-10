@@ -1,4 +1,49 @@
 {
+    "Luke": {
+        "specials": {
+            "Sand Blast": {
+                "Light": "236 + LP",
+                "Medium": "236 + MP",
+                "Heavy": "236 + HP",
+                "OD": "236 + PP",
+                "OD Follow-up": "236 + PP ~ PP"
+            },
+            "Rising Uppercut": {
+                "Light": "623 + LP",
+                "Medium": "623 + MP",
+                "Heavy": "623 + HP",
+                "OD": "623 + PP",
+                "OD Follow-up": "623 + PP ~ PP"
+            },
+            "Flash Knuckle": {
+                "Light": "214 + LP",
+                "Medium": "214 + MP",
+                "Heavy": "214 + HP",
+                "OD": "214 + PP"
+            },
+            "Aerial Flash Knuckle": {
+                "Base": "j.214 + P",
+                "OD": "j.214 + PP"
+            },
+            "Avenger": {
+                "Base": "236 + K",
+                "OD": "236 + KK"
+            },
+            "No Chaser": {
+                "Base": "236 + K ~ P",
+                "OD": "236 + KK ~ P"
+            },
+            "Impaler": {
+                "Base": "236 + K ~ K",
+                "OD": "236 + KK ~ K"
+            }
+        },
+        "supers": {
+            "Level 1 Super": "236236 + P",
+            "Level 2 Super": "214214 + P",
+            "Level 3 Super": "236236 + K"
+        }
+    },
     "Ryu": {
         "specials": {
             "Denjin Charge": {
@@ -43,6 +88,11 @@
                 "Denjin": "214 + P (Charged)",
                 "Denjin OD": "214 + PP (Charged)"
             }
+        },
+        "supers": {
+            "Level 1 Super": "236236 + P",
+            "Level 2 Super": "214214 + P",
+            "Level 3 Super": "236236 + K"
         }
     }
 }
