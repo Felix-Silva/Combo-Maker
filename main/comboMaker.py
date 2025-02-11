@@ -2,8 +2,8 @@ import tkinter as tk
 import json
 import os
 
-os.chdir(r"C:\Users\felix\Combo Maker\main")
-q = open('sf6Moves.json')
+os.chdir(r"C:\Users\felix\Combo Maker")
+q = open(r"main\sf6Moves.json")
 sf6Moves = json.load(q)
 
 class Application:
@@ -81,6 +81,22 @@ class Application:
         #   ←4        6→   Directions will be in an 8 way pattern, named as such 
         #   ↙1   ↓2   3↘   Arrows will depict these on the User Interface
 
+        directions = [
+            ["7", "8", "9"],  # Top row
+            ["4", "0", "6"],  # Middle row (0 is neutral)
+            ["1", "2", "3"]   # Bottom row
+        ]
+
+        for row in range(2, -1, -1):
+            for col in range(3):
+                if directions[row][col] == 0: ## TODO: Fix this mess
+                    continue
+                else:
+                    path = r"assets\dir" + directions[row][col] + ".png"
+                    img = tk.PhotoImage(file=path)
+                    img = img.subsample(4,4)
+                    btn = tk.Button(buttonFrame, image=img, command=lambda direct=directions[row][col]: print(direct)) # TODO: Add functionality beyond testing
+                    btn.grid(row=row, column=col)
         print(sf6Moves[name]["specials"]) # Test if reading
 
         # TODO: Finish .json list of special moves and supers
